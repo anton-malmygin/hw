@@ -17,11 +17,9 @@ env:
   - BUILD_ARGS="-DNOSERVER=1 -DNOVIDEOREC=1 -DNOPNG=1"
   - BUILD_ARGS="-DNOSERVER=1 -DLUA_SYSTEM=0 -DPHYSFS_SYSTEM=0"
 matrix:
-  exclude:
-  - language: objective-c
-    os: linux
   include:
   - language: objective-c
+    os: osx
     osx_image: xcode7.2
     xcode_project: ./project_files/HedgewarsMobile/Hedgewars.xcodeproj
     env: BUILD_ARGS=""
