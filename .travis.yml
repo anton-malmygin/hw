@@ -19,6 +19,7 @@ env:
 matrix:
   exclude:
   - language: objective-c
+    os: linux
   include:
   - language: objective-c
     osx_image: xcode7.2
