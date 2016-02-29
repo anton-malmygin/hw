@@ -16,6 +16,11 @@ env:
   - BUILD_ARGS="-DNOSERVER=1 -DBUILD_ENGINE_C=1"
   - BUILD_ARGS="-DNOSERVER=1 -DNOVIDEOREC=1 -DNOPNG=1"
   - BUILD_ARGS="-DNOSERVER=1 -DLUA_SYSTEM=0 -DPHYSFS_SYSTEM=0"
+matrix:
+  include:
+  - language: objective-c
+    osx_image: xcode7.2
+    xcode_project: ./project_files/HedgewarsMobile/Hedgewars.xcodeproj
 before_install: |
   if [ "$TRAVIS_OS_NAME" == "linux" ]; then
     sudo add-apt-repository -y ppa:zoogie/sdl2-snapshots
